@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Clicker from './Clicker';
+import ClickyButtons from './ClickyButtons';
 
 class App extends Component {
 
@@ -19,6 +20,7 @@ class App extends Component {
     return <div>
       <button onClick={this.handleClick}>Clicked {this.state.clicks} Times</button>
       <Clicker handleClick={(letter) => {console.log(`${letter} clicked`)}} />
+      <ClickyButtons numberOfButtons={99} onSelection={console.log} />
     </div>
   }
 }
